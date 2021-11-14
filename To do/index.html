@@ -4,10 +4,119 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
     <script defer src="./js/script.js"></script>
     <title>To do list</title>
 </head>
 <body>
+    <section class="main">
+        <section class="todo__wrap">
+            <div class="todo__wrap_task">
+                <h3 class="todo__title_task">Добавить задачу</h3>
+                <input type="text" class="header__task_header">
+                <textarea name="addTask"  cols="30" rows="10" class="task__description"></textarea>
+                <ul class="task__priority--wrap">
+                    <li class="task__priority--item">
+                        <span class="task__priority--header">Высокий</span>
+                        <input type="radio" name="priority" id="priority1">
+                    </li>
+                    <li class="task__priority--item">
+                        <span class="task__priority--header">Средний</span>
+                        <input type="radio" name="priority" id="priority2">
+                    </li>
+                    <li class="task__priority--item">
+                        <span class="task__priority--header">Низкий</span>
+                        <input type="radio" name="priority" id="priority3">
+                    </li>
+                </ul>
+                <button class="add_task" type="submit">Добавить задачу</button>
+            </div>
+            <div class="todo__wrap_task">
+                <h3 class="todo__backlog_task">Черновик</h3>
+                <ul class="backlog-list">
+                    <li class="backlog-list__item">Выпить чай</li>
+                    <button class="backlog-list__item--delete">Удалить</button>
+                    <button class="backlog-list__item--take-work">Взять в работу</button>
+                </ul>
+            </div>
+            <div class="todo__wrap_task">
+                <h3 class="todo__title_task">Активные задачи</h3>
+                <ul class="active__task--list">
+                    <li class="active__task--item">
+                        <span class="active-task__item--description">Выпить чай</span> 
+                        <button class="active-task__item--delete">Удалить</button>
+                        <button class="active-task__item--end-task">Завершить</button>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="todo__wrap_task">
+                <h3 class="todo__title_task">Выполненные задачи</h3>
+                <ul class="complete-task__list">
+                    <li class="complete-task--item">
+                        <span class="complete-task__item--description">Выпить чай</span>
+                        <span class="complete-task__date-end">дата завершения</span>
+                        <span class="complete-task__time-end">время завершения</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <article class="aside_bar">
+            <h3 class="analytycs">Аналитика работы</h3>
+            <ul class="history__task_list">
+                <li class="history__data">
+                    <span class="history__data--total-task">Всего задач:</span>
+                    <ul class="total-task__list">
+                        <li class="total-task__list--month">
+                            В этом месяце: 
+                            <span class="total-task__item--number">10</span>
+                        </li>
+                        <li class="total-task__list--week">
+                            На этой неделе:
+                            <span class="total-task__item--number">7</span>
+                        </li>
+                        <li class="total-task__list--all-time">
+                            Всего времени затрачено:
+                            <span class="total-task__all-time--number">
+                                <i class="all-time__number--hour">7</i>
+                                часов
+                                <i class="all-time__number--minutes">43</i>
+                                <i class="all-time__number--text-minutes">минуты</i>
+                            </span>
+                        </li>
+                        <li class="total-task__list--week">
+                            <div class="top-long-time-task__box">
+                                <h4 class="top-long-time-task__title">ТОП - 5 длительных задач:</h4>
+                                <ul class="top-long-time-task__list">
+                                    <li class="top-long-time-task__item">здача 1</li>
+                                    <li class="top-long-time-task__item">здача 2</li>
+                                    <li class="top-long-time-task__item">здача 3</li>
+                                    <li class="top-long-time-task__item">здача 4</li>
+                                    <li class="top-long-time-task__item">здача 5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="total-task__list--week">
+                            <div class="top-important-time-task__box">
+                                <h4 class="top-important-time-task__title">ТОП - 5 важных задач:</h4>
+                                <ul class="top-important-time-task__list">
+                                    <li class="top-important-time-task__item">здача 1</li>
+                                    <li class="top-important-time-task__item">здача 2</li>
+                                    <li class="top-important-time-task__item">здача 3</li>
+                                    <li class="top-important-time-task__item">здача 4</li>
+                                    <li class="top-important-time-task__item">здача 5</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </article>
+    </section>
     
 </body>
 </html>
